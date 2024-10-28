@@ -1,1 +1,1 @@
-localProperties = "{}"
+localProperties = {}
