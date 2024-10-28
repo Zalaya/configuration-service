@@ -1,2 +1,1 @@
-localProperties = {}
-suscribedModules = {}
+localProperties = "{}"
