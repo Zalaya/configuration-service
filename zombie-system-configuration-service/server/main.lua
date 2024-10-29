@@ -1,38 +1,40 @@
-TriggerEvent("zombie-system:configuration-service:get-properties")
+local localProperties = {}
+local subscribedModules = {}
 
-RegisterNetEvent("zombie-system:configuration-service:get-properties")
-AddEventHandler("zombie-system:configuration-service:get-properties", function()
-    MySQL.Async.fetchAll("SELECT name, value FROM properties", {}, function(results)
-        TriggerEvent("zombie-system:configuration-service:set-properties", json.encode(results))                 
-    end)
+TriggerEvent("zombie-system:configuration-service:subscribe", "configuration-service")
+
+RegisterNetEvent("zombie-system:configuration-service:configuration-updated")
+AddEventHandler("zombie-system:configuration-service:configuration-updated", function(remoteProperties)
+    localProperties = remoteProperties
 end)
 
-RegisterNetEvent("zombie-system:configuration-service:set-properties")
-AddEventHandler("zombie-system:configuration-service:set-properties", function(remoteProperties)
-    localProperties = toDictionary(json.decode(remoteProperties))
-end)
-
-function toDictionary(properties)
-    local dictionary = {}
-    
-    for _, property in ipairs(properties) do
-        dictionary[property.name] = tonumber(property.value) or property.value
+RegisterNetEvent("zombie-system:configuration-service:subscribe")
+AddEventHandler("zombie-system:configuration-service:subscribe", function(subscribedModule)
+    if not subscribedModules[subscribedModule] then
+        subscribedModules[subscribedModule] = true
     end
 
-    return dictionary
-end
+    TriggerEvent("zombie-system:" .. subscribedModule .. ":configuration-updated", localProperties)
+end)
 
 Citizen.CreateThread(function()
     while true do
         MySQL.Async.fetchAll("SELECT name, value FROM properties", {}, function(results)
-            local remoteProperties = toDictionary(results)
+            local remoteProperties = {}
+            
+            for _, remoteProperty in ipairs(results) do
+                remoteProperties[remoteProperty.name] = tonumber(remoteProperty.value) or remoteProperty.value
+            end
 
             if json.encode(localProperties) ~= json.encode(remoteProperties) then
-                TriggerEvent("zombie-system:configuration-service:set-properties", json.encode(results))
-            end                    
-        end)
+                localProperties = remoteProperties
+
+                for subscribedModule in pairs(subscribedModules) do
+                    TriggerEvent("zombie-system:" .. subscribedModule .. ":configuration-updated", localProperties)
+                end
+            end
+        end)    
 
         Citizen.Wait(localProperties["zombie-system.configuration-service.database-polling-interval"] or 5000)
     end
 end)
-
