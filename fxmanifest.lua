@@ -7,6 +7,10 @@ author "Zalaya"
 version "1.0.0"
 repository "https://github.com/Zalaya/configuration-service"
 
+depends {
+    "oxmysql"
+}
+
 server_scripts {
     "@oxmysql/lib/MySQL.lua",
     "server/main.lua"
