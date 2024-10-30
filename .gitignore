@@ -6,3 +6,7 @@
 ### IDE Configuration Files ###
 
 *.iml
+
+### Node ###
+
+node_modules/
