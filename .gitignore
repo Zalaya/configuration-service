@@ -1,12 +1,9 @@
-### IDE Configuration Directories ###
+# IDE Configuration Files and Directories
 
 .idea/
 .vscode/
-
-### IDE Configuration Files ###
-
 *.iml
 
-### Node ###
+# Node Dependency Directories
 
 node_modules/
