@@ -1,8 +1,9 @@
-import React, { ReactElement } from "react";
-import { ReactNode, useState } from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 
 type SidebarProps = {
+
     children: ReactNode;
+    
 }
 
 export const Sidebar = ({ children }: SidebarProps) => {

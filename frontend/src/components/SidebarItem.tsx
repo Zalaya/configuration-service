@@ -1,17 +1,24 @@
 import { SvgIconComponent } from "@mui/icons-material";
 import { SvgIconProps } from "@mui/material";
 
-type ItemProps = {
+type SidebarItemProps = {
+
     icon: SvgIconComponent;
     iconSize?: SvgIconProps["fontSize"];
     text: string;
     isMinimized?: boolean;
+    onClick?: () => void;
+
 };
 
-export const Item = ({ icon: Icon, iconSize = "medium", text = "", isMinimized = false }: ItemProps) => {
-
+export const SidebarItem = ({ icon: Icon, iconSize = "medium", text = "", isMinimized = false, onClick }: SidebarItemProps) => {
+    
     const handleClickEvent = (event: React.MouseEvent) => {
         event.stopPropagation();
+
+        if (onClick) {
+            onClick();
+        }
     }
 
     return (
