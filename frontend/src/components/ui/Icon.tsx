@@ -6,7 +6,7 @@ export type IconProps = {
     size?: SvgIconProps["fontSize"];
     color?: SvgIconProps["htmlColor"];
     className?: string;
-}
+};
 
 export const Icon = ({ icon: Icon, size = "medium", color = "inherit", className = "" }: IconProps) => (
     <Icon className={className} fontSize={size} htmlColor={color} />
