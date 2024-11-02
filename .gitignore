@@ -7,3 +7,7 @@
 # Node Dependency Directories
 
 node_modules/
+
+# React Build Directories
+
+dist/
