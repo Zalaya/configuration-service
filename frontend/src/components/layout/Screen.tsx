@@ -1,13 +1,18 @@
 import { ReactNode } from "react";
 
-type ScreenProps = {
+export type ScreenProps = {
+
     children: ReactNode;
+    className?: string;
+
 }
 
-export const Screen = ({ children }: ScreenProps) => {
+export const Screen = ({ children, className }: ScreenProps) => {
+
     return (
-        <div className="h-screen p-3 bg-gray-300">
+        <div className={`h-screen p-3 bg-gray-300 ${className}`}>
             {children}
         </div>
     )
+
 }
