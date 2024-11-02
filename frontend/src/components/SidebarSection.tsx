@@ -1,5 +1,5 @@
-import { WorkspaceType } from "../../enums/WorkspaceType";
-import { Item, ItemProps } from "../ui/Item";
+import { WorkspaceType } from "../enums/WorkspaceType";
+import { Item, ItemProps } from "./Item";
 
 export type SidebarSectionProps = {
     items: (ItemProps & { screen: WorkspaceType })[];

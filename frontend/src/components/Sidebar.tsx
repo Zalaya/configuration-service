@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useSidebar } from "../../hooks/useSidebar";
+import { useSidebar } from "../hooks/useSidebar";
 import { SidebarSection } from "./SidebarSection";
-import { useNavigation } from "../../hooks/useNavigation";
-import { WorkspaceType } from "../../contexts/NavigationContext";
+import { useNavigation } from "../hooks/useNavigation";
+import { WorkspaceType } from "../enums/WorkspaceType";
 
 export type SidebarProps = {
     className?: string;
@@ -11,7 +11,7 @@ export type SidebarProps = {
 export const Sidebar = ({ className = "" }: SidebarProps) => {
     const { main, footer } = useSidebar();
     const { setWorkspace } = useNavigation();
-    const [isMinimized, setIsMinimized] = useState(false);
+    const [isMinimized, setIsMinimized] = useState<boolean>(false);
 
     const handleClick = (event: React.MouseEvent) => {
         if (event.target === event.currentTarget) {

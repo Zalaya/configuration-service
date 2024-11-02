@@ -1,18 +1,18 @@
 import { ReactNode, useState } from "react";
 import { WorkspaceType } from "../enums/WorkspaceType";
-import { Modules } from "../components/layout/Modules";
-import { Properties } from "../components/layout/Properties";
-import Settings from "@mui/icons-material/Settings";
 import { NavigationContext } from "../contexts/NavigationContext";
-
-export type NavigationProviderProps = {
-    children: ReactNode;
-};
+import { Modules } from "../components/Modules";
+import { Properties } from "../components/Properties";
+import { Settings } from "../components/Settings";
 
 const workspaceComponents: Record<WorkspaceType, JSX.Element> = {
     [WorkspaceType.MODULES]: <Modules />,
     [WorkspaceType.PROPERTIES]: <Properties />,
     [WorkspaceType.SETTINGS]: <Settings />
+};
+
+export type NavigationProviderProps = {
+    children: ReactNode;
 };
 
 export const NavigationProvider = ({ children }: NavigationProviderProps) => {
