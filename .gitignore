@@ -1,13 +1,6 @@
-# IDE Configuration Files and Directories
-
 .idea/
 .vscode/
-*.iml
-
-# Node Dependency Directories
-
 node_modules/
-
-# React Build Directories
-
 dist/
+build/
+*.iml

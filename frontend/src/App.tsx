@@ -1,14 +1,7 @@
-import { Screen } from "./components/Screen";
-import { Sidebar } from "./components/Sidebar";
-import { Workspace } from "./components/Workspace";
-import { NavigationProvider } from "./providers/NavigationProvider";
+import "./styles/index.css";
+
 export const App = () => {
-    return (
-        <NavigationProvider>
-            <Screen>
-                <Sidebar />
-                <Workspace />
-            </Screen>
-        </NavigationProvider>
-    )
-}
+  return (
+    <h1>Hello, world!</h1>
+  );
+};
