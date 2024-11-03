@@ -1,5 +1,5 @@
 export const App = () => {
   return (
-    <h1>Buenas</h1>
+    <h1>Hello, World!</h1>
   );
 };
