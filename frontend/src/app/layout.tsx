@@ -1,16 +1,25 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
+
+import MainLayout from "@/components/MainLayout";
+
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Configuration Service"
 };
 
-const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html>
       <body>
-        {children}
+        <MainLayout>
+          {children}
+        </MainLayout>
       </body>
     </html>
   );
