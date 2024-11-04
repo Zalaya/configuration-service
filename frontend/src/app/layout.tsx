@@ -1,16 +1,12 @@
-import type { Metadata } from "next";
 import { ReactNode } from "react";
-import "./globals.css";
+import { Metadata } from "next";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Configuration Service"
 };
 
-interface RootLayoutProps {
-  children: ReactNode;
-};
-
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
     <html>
       <body>
@@ -19,3 +15,5 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
     </html>
   );
 };
+
+export default RootLayout;

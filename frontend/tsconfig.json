@@ -17,10 +17,6 @@
     "skipLibCheck": true,
     "noEmit": true,
     "incremental": true,
-    "types": [
-      "next",
-      "next/image-types/global"
-    ],
     "paths": {
       "@/*": [
         "./src/*"
