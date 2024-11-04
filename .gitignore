@@ -5,3 +5,4 @@ dist/
 build/
 .next/
 *.iml
+next-env.d.ts
