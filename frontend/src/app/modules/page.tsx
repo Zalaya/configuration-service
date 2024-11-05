@@ -1,8 +1,8 @@
 const Modules = () => {
   return (
-    <h1>
-      Modules Page!
-    </h1>
+    <div>
+      <h1>Modules</h1>
+    </div>
   );
 };
 

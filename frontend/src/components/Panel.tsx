@@ -6,7 +6,7 @@ interface PanelProps {
 
 const Panel = ({ children }: PanelProps) => {
   return (
-    <div className="h-full bg-white rounded-lg w-full p-3">
+    <div className="h-full w-full p-3 bg-white rounded-lg">
       {children}
     </div>
   );

@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
-const Home = () => {
+const RootPage = () => {
   redirect("/modules");
 };
 
-export default Home;
+export default RootPage;
