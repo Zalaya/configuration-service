@@ -3,6 +3,4 @@
 node_modules/
 dist/
 build/
-.next/
 *.iml
-next-env.d.ts
