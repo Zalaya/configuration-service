@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowImportingTsExtensions": true,
+    "baseUrl": ".",
     "isolatedModules": true,
     "lib": [
       "ES2023"
@@ -13,6 +14,11 @@
     "noUncheckedSideEffectImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "skipLibCheck": true,
     "strict": true,
     "target": "ES2022",
