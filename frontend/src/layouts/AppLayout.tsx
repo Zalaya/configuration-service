@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 
 const AppLayout = () => {
   return (
-    <div>
+    <div className="h-screen w-screen flex gap-3 bg-gray-200 p-3">
       <Sidebar />
       <Panel>
         <AppRoutes />

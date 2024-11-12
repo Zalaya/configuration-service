@@ -1,5 +1,5 @@
 const Properties = () => {
-  return <h1>Hello world!</h1>;
+  return <h1>Properties page right here!</h1>;
 };
 
 export default Properties;

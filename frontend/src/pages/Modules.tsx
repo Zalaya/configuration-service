@@ -1,5 +1,5 @@
-const Properties = () => {
-  return <h1>Hello world!</h1>;
+const Modules = () => {
+  return <h1>Modules page right here!</h1>;
 };
 
-export default Properties;
+export default Modules;

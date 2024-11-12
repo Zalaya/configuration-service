@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 
-import Properties from "@/pages/Modules";
 import Modules from "@/pages/Modules";
+import Properties from "@/pages/Properties";
 
 const AppRoutes = () => {
   return (
