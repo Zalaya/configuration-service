@@ -9,11 +9,13 @@ interface ItemProps {
 
 const Item = ({ icon: Icon, label, to }: ItemProps) => {
   return (
-    <NavLink to={to} className="">
-      <Icon className="" />
-      <span>
-        {label}
-      </span>
+    <NavLink to={to} className="w-full flex gap-3 rounded-lg p-3 items-center transition duration-200 hover:bg-gray-200">
+      <Icon />
+      {label && (
+        <span className="font-semibold">
+          {label}
+        </span>
+      )}
     </NavLink>
   );
 };
