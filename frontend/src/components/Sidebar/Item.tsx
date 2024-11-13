@@ -3,13 +3,17 @@ import { NavLink } from "react-router-dom";
 
 interface ItemProps {
   icon: SvgIconComponent;
-  label: string;
+  label?: string;
   to: string;
 };
 
-const Item = ({ icon: Icon, label, to }: ItemProps) => {
+const Item = ({ icon: Icon, label = "", to }: ItemProps) => {
   return (
-    <NavLink to={to} className="w-full flex gap-3 rounded-lg p-3 items-center transition duration-200 hover:bg-gray-200">
+    <NavLink to={to} className={({ isActive }) =>
+      `w-full flex gap-3 rounded-lg p-3 items-center transition-all duration-200 hover:text-blue-700 ${
+        isActive ? "bg-gray-200 text-blue-700" : "hover:bg-gray-200 text-gray-700"
+      }`
+    }>
       <Icon />
       {label && (
         <span className="font-semibold">
