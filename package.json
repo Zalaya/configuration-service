@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "fivem-configuration-service",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -16,6 +16,8 @@
     "react-router-dom": "^6.28.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.7"
   },
   "devDependencies": {

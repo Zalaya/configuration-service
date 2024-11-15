@@ -1,7 +1,7 @@
-import AppRoutes from "@/routes/AppRoutes";
+import AppRoutes from "./routes/AppRoutes";
 
-import Panel from "@/components/Panel";
-import Sidebar from "@/components/Sidebar/Sidebar";
+import Panel from "./components/Layout/Panel";
+import Sidebar from "./components/Layout/Sidebar";
 
 const AppLayout = () => {
   return (
