@@ -1,4 +1,4 @@
-import Spinner from "@/components/Spinner";
+import Spinner from "@/components/Panel/Loading/Spinner";
 
 const Loading = () => {
   return (

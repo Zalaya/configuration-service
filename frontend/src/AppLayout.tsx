@@ -2,7 +2,7 @@ import { Suspense } from "react";
 
 import AppRoutes from "@/routes/AppRoutes";
 
-import Panel from "@/components/Panel";
+import Panel from "@/components/Panel/Panel";
 import Sidebar from "@/components/Sidebar/Sidebar";
 
 import Loading from "./pages/Loading";
