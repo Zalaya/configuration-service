@@ -1,9 +1,8 @@
-import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-const Modules = lazy(() => import("@/pages/Modules"));
-const Properties = lazy(() => import("@/pages/Properties"));
-const Settings = lazy(() => import("@/pages/Settings"));
+import Modules from "@/pages/Modules/Modules";
+import Properties from "@/pages/Properties/Properties";
+import Settings from "@/pages/Settings/Settings";
 
 const AppRoutes = () => {
   return (
