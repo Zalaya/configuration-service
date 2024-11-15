@@ -1,4 +1,4 @@
-# FiveM Configuration Service Frontend
+# FiveM Configuration Service Frontend Documentation
 
 Este proyecto contiene el Frontend del servicio de configuración de FiveM que aspira a ser una solución eficaz para la gestión y mantenimiento de todas las propiedades de configuración de los scripts que pueda albergar un servidor de FiveM, pudiendo así eliminar los extensos archivos de configuración o al menos poder centralizar todas esas configuraciones a un simple servicio. Esta parte, el frontend, será el diseño de la interfaz web visual para poder gestionar todo esto facilmente por un usuario. La idea final es poder lanzar este Frontend de manera opcional y complementaria con Docker al Backend del servicio de configuración. El cual puede funcionar obviamente de manera independiente ofreciendo una posible API REST.
 
