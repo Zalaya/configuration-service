@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom"
 import { lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 
 const Modules = lazy(() => import("@/pages/Modules"));
 const Properties = lazy(() => import("@/pages/Properties"));

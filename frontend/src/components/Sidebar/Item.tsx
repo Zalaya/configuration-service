@@ -1,5 +1,5 @@
-import { SvgIconComponent } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
+import { SvgIconComponent } from "@mui/icons-material";
 
 interface ItemProps {
   icon: SvgIconComponent;
