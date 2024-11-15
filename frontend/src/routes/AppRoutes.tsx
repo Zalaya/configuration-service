@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
-import Modules from "@/pages/Modules/Modules";
-import Properties from "@/pages/Properties/Properties";
-import Settings from "@/pages/Settings/Settings";
+import Modules from "@/pages/Modules";
+import Properties from "@/pages/Properties";
+import Settings from "@/pages/Settings";
 
 const AppRoutes = () => {
   return (

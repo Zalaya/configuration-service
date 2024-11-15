@@ -1,5 +1,7 @@
 const Properties = () => {
-  return <h1>Properties page right here!</h1>;
+  return (
+    <h1>This is the Properties page!</h1>
+  );
 };
 
 export default Properties;
