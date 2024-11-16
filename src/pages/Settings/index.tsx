@@ -1,12 +1,5 @@
-import MockContainer from "@/mocks/MockContainer";
-import MockTitle from "@/mocks/MockTitle";
-
 const Settings = () => {
-  return (
-    <MockContainer>
-      <MockTitle />
-    </MockContainer>
-  );
+  return <h1>Settings Page!</h1>;
 };
 
 export default Settings;

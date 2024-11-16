@@ -1,12 +1,5 @@
-import MockContainer from "@/mocks/MockContainer";
-import MockTitle from "@/mocks/MockTitle";
-
 const Modules = () => {
-  return (
-    <MockContainer>
-      <MockTitle />
-    </MockContainer>
-  );
+  return <h1>Modules Page!</h1>;
 };
 
 export default Modules;
