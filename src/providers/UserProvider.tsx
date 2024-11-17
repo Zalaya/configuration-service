@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
-import UserContext from "../contexts/UserContext";
+
+import useLocalStorage from "@/hooks/useLocalStorage";
+import UserContext from "@/contexts/UserContext";
 
 interface UserProviderProps {
   children: ReactNode;

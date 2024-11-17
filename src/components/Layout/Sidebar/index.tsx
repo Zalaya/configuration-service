@@ -5,8 +5,8 @@ import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotion
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
-import Item from "./Item";
-import Section from "./Section";
+import Item from "@/components/Layout/Sidebar/Item";
+import Section from "@/components/Layout/Sidebar/Section";
 
 const Sidebar = () => {
   const [isMinimized, setIsMinimized] = useState<boolean>(false);
