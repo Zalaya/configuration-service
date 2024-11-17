@@ -3,6 +3,7 @@ import { MouseEvent, useState } from "react";
 import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined";
 import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 import Item from "./Item";
 import Section from "./Section";
@@ -21,6 +22,7 @@ const Sidebar = () => {
       </Section>
       <Section>
         <Item icon={SettingsOutlinedIcon} label={!isMinimized ? "Settings" : undefined} to="/settings" />
+        <Item icon={AccountCircleOutlinedIcon} label={!isMinimized ? "Account" : undefined} to="/settings" />
       </Section>
     </div>
   );
