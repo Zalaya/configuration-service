@@ -7,9 +7,11 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 
 import Item from "@/components/Layout/Sidebar/Item";
 import Section from "@/components/Layout/Sidebar/Section";
+import useUser from "@/contexts/User/useUser";
 
 const Sidebar = () => {
   const [isMinimized, setIsMinimized] = useState<boolean>(false);
+  const { user } = useUser();
 
   return (
     <div
@@ -22,7 +24,7 @@ const Sidebar = () => {
       </Section>
       <Section>
         <Item icon={SettingsOutlinedIcon} label={!isMinimized ? "Settings" : undefined} to="/settings" />
-        <Item icon={AccountCircleOutlinedIcon} label={!isMinimized ? "Account" : undefined} to="/settings" />
+        <Item icon={AccountCircleOutlinedIcon} label={!isMinimized ? (user ? user : "Guest") : undefined} />
       </Section>
     </div>
   );

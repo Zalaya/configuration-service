@@ -10,7 +10,7 @@ const useLocalStorage = (key: string) => {
     return () => window.removeEventListener("storage", handleStorageChange);
   }, [key]);
 
-  const setValue = (value: string | null) => {
+  const setValue = (value: string) => {
     setStoredValue(value);
 
     if (value === null) localStorage.removeItem(key);
