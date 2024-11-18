@@ -17,7 +17,7 @@ const NavItem = ({ icon: Icon, label = "", to }: NavItemProps) => {
     }>
       <Icon />
       {label && (
-        <span className="font-semibold">
+        <span className="font-semibold truncate">
           {label}
         </span>
       )}

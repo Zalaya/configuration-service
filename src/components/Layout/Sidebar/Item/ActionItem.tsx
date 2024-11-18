@@ -11,7 +11,7 @@ const ActionItem = ({ icon: Icon, label = "", onClick }: ActionItemProps) => {
     <div className="w-full flex gap-3 rounded-lg p-3 items-center transition-all cursor-pointer duration-200 hover:text-blue-700 hover:bg-gray-200 text-gray-700" onClick={onClick}>
       <Icon />
       {label && (
-        <span className="font-semibold">
+        <span className="font-semibold truncate">
           {label}
         </span>
       )}
