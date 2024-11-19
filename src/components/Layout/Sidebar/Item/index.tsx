@@ -1,21 +1,28 @@
+import { NavLink } from "react-router-dom";
+
 import { SvgIconComponent } from "@mui/icons-material";
 
-import NavItem from "@/components/Layout/Sidebar/Item/NavItem";
-import ActionItem from "@/components/Layout/Sidebar/Item/ActionItem";
+import Icon from "@/components/Layout/Sidebar/Item/Icon";
+import Label from "@/components/Layout/Sidebar/Item/Label";
 
 interface ItemProps {
   icon: SvgIconComponent;
-  label?: string;
-  to?: string;
-  onClick?: () => void;
+  label: string;
+  to: string;
+  isMinimized?: boolean;
 };
 
-const Item = ({ icon: Icon, label = "", to = "", onClick = () => {} }: ItemProps) => {
-  return to ? (
-    <NavItem icon={Icon} label={label} to={to} />
-  ) : (
-    <ActionItem icon={Icon} label={label} onClick={onClick} />
-  )
+const Item = ({ icon, label, to, isMinimized = false }: ItemProps) => {
+  return (
+    <NavLink to={to} className={({ isActive }) =>
+      `w-full flex gap-3 rounded-lg p-3 items-center transition-colors duration-200 hover:text-blue-700 ${
+        isActive ? "bg-gray-200 text-blue-700" : "hover:bg-gray-200 text-gray-700"
+      }`
+    }>
+      <Icon icon={icon} isMinimized={isMinimized} />
+      <Label label={label} isMinimized={isMinimized} />
+    </NavLink>
+  );
 };
 
 export default Item;
