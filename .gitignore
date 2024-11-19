@@ -10,3 +10,7 @@
 ### Node.js ###
 
 node_modules/
+
+### React ###
+
+dist/

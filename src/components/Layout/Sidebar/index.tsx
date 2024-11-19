@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`h-full bg-white rounded-lg p-3 flex flex-col justify-between transition-all duration-200 select-none overflow-hidden ${!isMinimized ? "w-[15em]" : "w-[4.76em]"}`}
+      className={`h-full bg-white rounded-lg p-3 flex flex-col justify-between transition-all duration-200 select-none overflow-hidden ${!isMinimized ? "w-[15em]" : "w-[4.684em]"}`}
       onClick={(event: MouseEvent) => (event.target === event.currentTarget) ? setIsMinimized(isMinimized => !isMinimized) : undefined}
     >
       <Section>
