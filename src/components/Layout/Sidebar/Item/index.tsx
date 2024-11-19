@@ -19,7 +19,7 @@ const Item = ({ icon, label, to, isMinimized = false }: ItemProps) => {
         isActive ? "bg-gray-200 text-blue-700" : "hover:bg-gray-200 text-gray-700"
       }`
     }>
-      <Icon icon={icon} isMinimized={isMinimized} />
+      <Icon icon={icon} />
       <Label label={label} isMinimized={isMinimized} />
     </NavLink>
   );

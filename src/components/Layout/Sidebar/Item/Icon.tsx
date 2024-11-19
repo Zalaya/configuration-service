@@ -2,12 +2,11 @@ import { SvgIconComponent } from "@mui/icons-material";
 
 interface IconProps {
   icon: SvgIconComponent;
-  isMinimized?: boolean;
 };
 
-const Icon = ({ icon: Icon, isMinimized = false}: IconProps) => {
+const Icon = ({ icon: Icon}: IconProps) => {
   return (
-    <div className={`flex justify-center items-center transition-transform duration-200 ${isMinimized ? "rotate-[-360deg]" : ""}`}>
+    <div className="flex justify-center items-center">
       <Icon />
     </div>
   );
