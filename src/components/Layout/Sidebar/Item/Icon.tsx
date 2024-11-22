@@ -7,7 +7,7 @@ interface IconProps {
 const Icon = ({ icon: Icon}: IconProps) => {
   return (
     <div className="flex justify-center items-center">
-      <Icon />
+      <Icon  />
     </div>
   );
 };
