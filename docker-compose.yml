@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8085:80"
+    networks:
+      - fivem-configuration-service
+
+networks:
+  fivem-configuration-service:
+    driver: bridge
