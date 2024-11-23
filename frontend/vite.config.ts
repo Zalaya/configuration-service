@@ -6,8 +6,6 @@ export default defineConfig({
     react()
   ],
   build: {
-    outDir: "dist",
-    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
@@ -20,17 +18,11 @@ export default defineConfig({
     },
   },
   server: {
-    watch: {
-      usePolling: true
-    },
-    host: true,
-    strictPort: true,
     port: 8085
   },
   resolve: {
     alias: {
       "@": "/src"
     }
-  },
-  base: "/"
+  }
 });

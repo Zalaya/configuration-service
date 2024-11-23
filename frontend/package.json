@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "check": "npx npm-check-updates",
-    "clean": "rm -rf dist/ node_modules/ package-lock.json"
+    "clean": "rm -rf dist/ node_modules/"
   },
   "peerDependencies": {
     "react": "^18.3.1",
