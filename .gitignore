@@ -14,3 +14,7 @@ node_modules/
 ### React ###
 
 dist/
+
+### Maven ###
+
+target/
