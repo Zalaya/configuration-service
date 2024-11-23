@@ -1,5 +1,8 @@
+name: fivem-configuration-service
+
 services:
   frontend:
+    container_name: frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -10,4 +13,5 @@ services:
 
 networks:
   fivem-configuration-service:
+    name: fivem-configuration-service
     driver: bridge
