@@ -13,4 +13,12 @@
     </parent>
 
     <artifactId>application</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>xyz.zalaya.fivex</groupId>
+            <artifactId>domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

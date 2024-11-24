@@ -1,6 +1,7 @@
-name: fivem-configuration-service
+name: fivex
 
 services:
+
   frontend:
     container_name: frontend
     build:
@@ -9,9 +10,19 @@ services:
     ports:
       - "8085:80"
     networks:
-      - fivem-configuration-service
+      - fivex
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - fivex
 
 networks:
-  fivem-configuration-service:
-    name: fivem-configuration-service
+  fivex:
+    name: fivex
     driver: bridge

@@ -24,24 +24,9 @@ CREATE TABLE IF NOT EXISTS `properties` (
 
 DROP TABLE IF EXISTS `module_properties`;
 CREATE TABLE IF NOT EXISTS `module_properties` (
-  `id` BIGINT AUTO_INCREMENT PRIMARY KEY,
   `module_id` BIGINT NOT NULL,
   `property_id` BIGINT NOT NULL,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  FOREIGN KEY (`module_id`) REFERENCES `modules`(`id`),
-  FOREIGN KEY (`property_id`) REFERENCES `properties`(`id`)
-);
-
-DROP TABLE IF EXISTS `audit_logs`;
-CREATE TABLE IF NOT EXISTS `audit_logs` (
-  `id` BIGINT AUTO_INCREMENT PRIMARY KEY,
-  `module_id` BIGINT NOT NULL,
-  `property_id` BIGINT NOT NULL,
-  `action` ENUM('CREATE', 'UPDATE', 'DELETE') NOT NULL,
-  `old_value` VARCHAR(255),
-  `new_value` VARCHAR(255),
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (`module_id`) REFERENCES `modules`(`id`),
-  FOREIGN KEY (`property_id`) REFERENCES `properties`(`id`)
+  PRIMARY KEY (`module_id`, `property_id`),
+  FOREIGN KEY (`module_id`) REFERENCES `modules`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`property_id`) REFERENCES `properties`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
