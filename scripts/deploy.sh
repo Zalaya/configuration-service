@@ -1,7 +1,7 @@
 #! /bin/bash
 
 SERVICE=""
-DOCKER_COMPOSE_FILE="../docker-compose.yml"
+DOCKER_COMPOSE_FILE="$(dirname "$0")/../docker-compose.yml"
 
 while [[ "$#" -gt 0 ]]; do
   case $1 in
