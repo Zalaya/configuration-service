@@ -11,7 +11,7 @@ services:
       - "3306:3306"
     volumes:
       - database:/var/lib/mysql
-      - ./database/script.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../database/script.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - fivex-network
 
