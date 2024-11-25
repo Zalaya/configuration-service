@@ -1,8 +1,10 @@
 import Icon from "@/components/Icon";
 
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+
 const AppLayout = () => {
   return (
-    <Icon />
+    <Icon icon={AcUnitIcon} fontSize={"large"} />
   );
 };
 
