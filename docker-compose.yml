@@ -4,7 +4,6 @@ services:
 
   database:
     image: mysql:latest
-    container_name: database
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: fivex
@@ -17,7 +16,6 @@ services:
       - fivex-network
 
   frontend:
-    container_name: frontend
     build:
       context: .
       dockerfile: Dockerfile
