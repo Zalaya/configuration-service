@@ -1,11 +1,12 @@
-import { Routes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 
 const AppRoutes = () => {
-  return (
-    <Routes>
+  const routes = useRoutes([
+    ...authRoutes,
+    ...dashboardRoutes
+  ])
 
-    </Routes>
-  );
+  return routes;
 };
 
 export default AppRoutes;
