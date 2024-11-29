@@ -1,11 +1,9 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import { Navigate } from "react-router-dom";
 
 import useAuth from "@/contexts/auth/useAuth";
 
-interface ProtectedRouteProps {
-  children: ReactNode;
-}
+type ProtectedRouteProps = PropsWithChildren;
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { isAuthenticated } = useAuth();
