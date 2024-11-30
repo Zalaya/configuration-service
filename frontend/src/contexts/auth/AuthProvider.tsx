@@ -1,10 +1,8 @@
-import { ReactNode, useState } from "react";
+import { PropsWithChildren, useState } from "react";
 
 import AuthContext from "@/contexts/auth/AuthContext";
 
-interface AuthProviderProps {
-  children: ReactNode;
-};
+type AuthProviderProps = PropsWithChildren;
 
 const AuthProvider = ({ children }: AuthProviderProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
