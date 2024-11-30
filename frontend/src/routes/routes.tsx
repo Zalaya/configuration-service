@@ -1,15 +1,21 @@
-import { Navigate, RouteObject } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 
-import authRoutes from "@/layouts/auth/routes/routes";
-import dashboardRoutes from "@/layouts/dashboard/routes/routes";
+import AppLayout from "@/layouts/AppLayout";
+
+import Home from "@/pages/Home";
+import Modules from "@/pages/Modules";
+import Properties from "@/pages/Properties";
 
 const appRoutes: RouteObject[] = [
   {
     path: "/",
-    element: <Navigate to="/dashboard/modules" replace />
-  },
-  ...authRoutes,
-  ...dashboardRoutes
+    element: <AppLayout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "modules", element: <Modules /> },
+      { path: "properties", element: <Properties /> }
+    ]
+  }
 ];
 
 export default appRoutes;
