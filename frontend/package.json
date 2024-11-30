@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "fivex-frontend",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "check": "npx npm-check-updates",
     "upgrade": "npx npm-check-updates -u",
-    "uninstall": "rm -rf dist/ node_modules/ package-lock.json",
-    "reinstall" : "npm run uninstall && npm install"
+    "clean": "rm -rf dist/ node_modules/ package-lock.json",
+    "reinstall": "npm run clean && npm install"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -20,12 +20,11 @@
   "devDependencies": {
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.7.2",
-    "vite": "^6.0.0"
+    "vite": "^6.0.1"
   }
 }
