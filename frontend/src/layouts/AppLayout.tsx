@@ -1,4 +1,4 @@
-const DashboardLayout = () => {
+const AppLayout = () => {
   return (
     <div>
 
@@ -6,4 +6,4 @@ const DashboardLayout = () => {
   );
 };
 
-export default DashboardLayout;
+export default AppLayout;
