@@ -7,7 +7,7 @@ import Item from "./Item";
 
 const Sidebar = () => {
   return (
-    <div className="bg-white h-full flex justify-between flex-col rounded-lg w-60 p-3">
+    <div className="bg-white h-full flex justify-between flex-col rounded-lg w-64 p-3">
       <Group>
         <Item icon={AppsIcon} text="Modules" />
         <Item icon={AutoAwesomeIcon} text="Properties" />
