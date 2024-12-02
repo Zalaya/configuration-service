@@ -2,8 +2,10 @@
 
 .idea/
 .vscode/
+*.iml
 
 # Node.js
 
 node_modules/
 dist/
+build/
