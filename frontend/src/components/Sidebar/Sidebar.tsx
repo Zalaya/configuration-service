@@ -3,7 +3,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 import Group from "./Group";
-import Item from "./Item";
+import Item from "./Item/Item";
 
 const Sidebar = () => {
   return (
