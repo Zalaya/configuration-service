@@ -1,7 +1,11 @@
-export const Label = () => {
+export type LabelProps = {
+  text: string;
+};
+
+export const Label = ({ text }: LabelProps) => {
   return (
     <div>
-      Label
+      {text}
     </div>
   );
 };
