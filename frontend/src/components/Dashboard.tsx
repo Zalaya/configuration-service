@@ -1,7 +1,11 @@
-const Dashboard = () => {
+import { PropsWithChildren } from "react";
+
+type DashboardProps = PropsWithChildren;
+
+const Dashboard = ({ children }: DashboardProps) => {
   return (
     <div>
-      Dashboard
+      {children}
     </div>
   );
 };
