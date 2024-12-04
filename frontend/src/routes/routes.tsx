@@ -1,11 +1,11 @@
 import { RouteObject } from "react-router-dom";
 
-import AppLayout from "@/layouts/AppLayout";
+import { AppLayout } from "@/layouts/AppLayout";
 
-import Modules from "@/pages/Modules";
-import Properties from "@/pages/Properties";
+import { Modules } from "@/pages/Modules";
+import { Properties } from "@/pages/Properties";
 
-const appRoutes: RouteObject[] = [
+export const appRoutes: RouteObject[] = [
   {
     path: "/",
     element: <AppLayout />,
@@ -15,5 +15,3 @@ const appRoutes: RouteObject[] = [
     ]
   }
 ];
-
-export default appRoutes;

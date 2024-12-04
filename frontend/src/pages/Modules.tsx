@@ -1,4 +1,4 @@
-const Modules = () => {
+export const Modules = () => {
   return (
     <div>
       Modules
@@ -6,4 +6,3 @@ const Modules = () => {
   );
 };
 
-export default Modules;
