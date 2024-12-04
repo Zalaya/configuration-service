@@ -4,6 +4,7 @@ import { AppLayout } from "@/layouts/AppLayout";
 
 import { Modules } from "@/pages/Modules";
 import { Properties } from "@/pages/Properties";
+import { Settings } from "@/pages/Settings.tsx";
 
 export const appRoutes: RouteObject[] = [
   {
@@ -11,7 +12,8 @@ export const appRoutes: RouteObject[] = [
     element: <AppLayout />,
     children: [
       { path: "modules", element: <Modules /> },
-      { path: "properties", element: <Properties /> }
+      { path: "properties", element: <Properties /> },
+      { path: "settings", element: <Settings /> }
     ]
   }
 ];
