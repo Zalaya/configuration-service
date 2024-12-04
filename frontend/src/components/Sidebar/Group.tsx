@@ -1,11 +1,7 @@
-import { PropsWithChildren } from "react";
-
-type GroupProps = PropsWithChildren;
-
-const Group = ({ children }: GroupProps) => {
+const Group = () => {
   return (
-    <div className="flex flex-col gap-1">
-      {children}
+    <div>
+      Group
     </div>
   );
 };

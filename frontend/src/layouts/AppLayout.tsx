@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 
 const AppLayout = () => {
   return (
-    <div className="h-screen flex gap-3 bg-gray-200 p-3">
+    <div>
       <Sidebar />
       <Dashboard>
         <Outlet />
