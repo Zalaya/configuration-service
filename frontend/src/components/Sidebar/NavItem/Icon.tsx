@@ -1,9 +1,7 @@
-const Icon = () => {
+export const Icon = () => {
   return (
     <div>
       Icon
     </div>
   );
 };
-
-export default Icon;

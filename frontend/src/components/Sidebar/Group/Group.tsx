@@ -1,8 +1,8 @@
 import { PropsWithChildren } from "react";
 
-type DashboardProps = PropsWithChildren;
+type GroupProps = PropsWithChildren;
 
-export const Dashboard = ({ children }: DashboardProps) => {
+export const Group = ({ children }: GroupProps) => {
   return (
     <div>
       {children}
