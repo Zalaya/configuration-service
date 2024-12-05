@@ -6,25 +6,14 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 export const sidebarConfiguration: GroupProps[] = [
   {
-    text: "Management",
     items: [
-      {
-        text: "Modules",
-        component: FolderCopyOutlinedIcon
-      },
-      {
-        text: "Properties",
-        component: ListAltOutlinedIcon
-      }
+      { text: "Modules", component: FolderCopyOutlinedIcon },
+      { text: "Properties", component: ListAltOutlinedIcon }
     ]
   },
   {
-    text: "Configuration",
     items: [
-      {
-        text: "Settings",
-        component: SettingsOutlinedIcon
-      }
+      { text: "Settings", component: SettingsOutlinedIcon }
     ]
   }
 ];
