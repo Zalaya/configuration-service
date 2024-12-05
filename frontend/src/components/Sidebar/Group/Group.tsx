@@ -1,17 +1,17 @@
-import { NavItem, NavItemProps } from "@/components/Sidebar/NavItem/NavItem.tsx";
+import { NavItem, NavItemProps } from "@/components/Sidebar/Group/NavItem/NavItem";
 
-import { Label } from "@/components/Sidebar/Group/Label.tsx";
-import { Separator } from "@/components/Sidebar/Group/Separator.tsx";
+import { Title } from "@/components/Sidebar/Group/Header/Title";
+import { Separator } from "@/components/Sidebar/Group/Header/Separator";
+import { HeaderProps } from "@/components/Sidebar/Group/Header/Header";
 
-export type GroupProps = {
-  text: string;
+export type GroupProps = HeaderProps & {
   items: NavItemProps[];
-};
+}
 
 export const Group = ({ text, items }: GroupProps) => {
   return (
     <div>
-      <Label text={text} />
+      <Title text={text} />
       <Separator />
       <div>
         {items.map((props, index) => (

@@ -1,6 +1,6 @@
-import { sidebarConfiguration } from "@/configuration/sidebarConfiguration.ts";
+import { sidebarConfiguration } from "@/configuration/sidebarConfiguration";
 
-import { Group } from "@/components/Sidebar/Group/Group.tsx";
+import { Group } from "@/components/Sidebar/Group/Group";
 
 export const Sidebar = () => {
   return (

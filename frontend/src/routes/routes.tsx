@@ -4,7 +4,7 @@ import { AppLayout } from "@/layouts/AppLayout";
 
 import { Modules } from "@/pages/Modules";
 import { Properties } from "@/pages/Properties";
-import { Settings } from "@/pages/Settings.tsx";
+import { Settings } from "@/pages/Settings";
 
 export const appRoutes: RouteObject[] = [
   {
