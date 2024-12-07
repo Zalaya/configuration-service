@@ -9,11 +9,11 @@ export const Sidebar = () => {
   return (
     <div>
       <Group>
-        <NavItem text="Modules" component={FolderCopyOutlinedIcon} />
-        <NavItem text="Properties" component={ListAltOutlinedIcon} />
+        <NavItem icon={FolderCopyOutlinedIcon} text="Modules"  />
+        <NavItem icon={ListAltOutlinedIcon} text="Properties" />
       </Group>
       <Group>
-        <NavItem text="Settings" component={SettingsOutlinedIcon} />
+        <NavItem icon={SettingsOutlinedIcon} text="Settings"  />
       </Group>
     </div>
   );

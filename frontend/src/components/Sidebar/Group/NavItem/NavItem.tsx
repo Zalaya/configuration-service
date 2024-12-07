@@ -1,13 +1,17 @@
-import { Icon, IconProps } from "@/components/Sidebar/Group/NavItem/Icon";
-import { Label, LabelProps } from "@/components/Sidebar/Group/NavItem/Label";
+import { SvgIconComponent } from "@mui/icons-material";
 
-export type NavItemProps = IconProps & LabelProps;
+export type NavItemProps = {
+  icon: SvgIconComponent;
+  text: string;
+};
 
-export const NavItem = ({ component, text }: NavItemProps) => {
+export const NavItem = ({ icon: Icon, text }: NavItemProps) => {
   return (
     <div>
-      <Icon component={component} />
-      <Label text={text} />
+      <Icon />
+      <div>
+        {text}
+      </div>
     </div>
   );
 };
