@@ -2,7 +2,7 @@ import { NavItem, NavItemProps } from "@/components/Sidebar/Group/NavItem/NavIte
 
 export type GroupProps = {
   items: NavItemProps[];
-}
+};
 
 export const Group = ({ items }: GroupProps) => {
   return (
@@ -12,4 +12,4 @@ export const Group = ({ items }: GroupProps) => {
       ))}
     </div>
   );
-}
+};
