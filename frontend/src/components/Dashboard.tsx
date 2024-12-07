@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-type DashboardProps = PropsWithChildren;
+export type DashboardProps = PropsWithChildren;
 
 export const Dashboard = ({ children }: DashboardProps) => {
   return (

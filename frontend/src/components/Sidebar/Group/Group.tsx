@@ -1,15 +1,11 @@
-import { NavItem, NavItemProps } from "@/components/Sidebar/Group/NavItem/NavItem";
+import { PropsWithChildren } from "react";
 
-export type GroupProps = {
-  items: NavItemProps[];
-};
+export type GroupProps = PropsWithChildren;
 
-export const Group = ({ items }: GroupProps) => {
+export const Group = ({ children }: GroupProps) => {
   return (
     <div>
-      {items.map((props, index) => (
-        <NavItem key={index} {...props} />
-      ))}
+      {children}
     </div>
   );
 };

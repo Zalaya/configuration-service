@@ -12,3 +12,7 @@ dist/
 build/
 
 package-lock.json
+
+# Maven
+
+target/
