@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS `fivex_database`;
-CREATE DATABASE IF NOT EXISTS `fivex_database`;
-USE `fivex_database`;
+DROP DATABASE IF EXISTS `storage`;
+CREATE DATABASE IF NOT EXISTS `storage`;
+USE `storage`;
 
 DROP TABLE IF EXISTS `modules`;
 CREATE TABLE IF NOT EXISTS `modules` (
