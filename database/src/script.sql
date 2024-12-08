@@ -4,15 +4,15 @@ USE `fivex_database`;
 
 DROP TABLE IF EXISTS `modules`;
 CREATE TABLE IF NOT EXISTS `modules` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL UNIQUE,
-  `description` TEXT NOT NULL,
+  `description` TEXT,
   PRIMARY KEY (`id`)
 );
 
 DROP TABLE IF EXISTS `properties`;
 CREATE TABLE IF NOT EXISTS `properties` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
   `key` VARCHAR(255) NOT NULL,
   `value` TEXT NOT NULL,
   PRIMARY KEY (`id`)
@@ -20,10 +20,9 @@ CREATE TABLE IF NOT EXISTS `properties` (
 
 DROP TABLE IF EXISTS `module_properties`;
 CREATE TABLE IF NOT EXISTS `module_properties` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `module_id` INT NOT NULL,
-  `property_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
+  `module_id` BIGINT NOT NULL,
+  `property_id` BIGINT NOT NULL,
+  PRIMARY KEY (`module_id`, `property_id`),
   FOREIGN KEY (`module_id`) REFERENCES `modules`(`id`),
   FOREIGN KEY (`property_id`) REFERENCES `properties`(`id`)
 );
