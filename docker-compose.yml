@@ -4,9 +4,17 @@ services:
 
   database:
     container_name: database
-    build: ./database
+    restart: unless-stopped
     env_file: ./database/.env
+    build:
+      context: ./database
+      dockerfile: Dockerfile
     ports:
       - "3306:3306"
     volumes:
+      - database:/var/lib/mysql
       - ./database/src:/docker-entrypoint-initdb.d
+
+volumes:
+  database:
+    driver: local
