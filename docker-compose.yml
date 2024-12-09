@@ -3,13 +3,10 @@ version: "3.8"
 services:
 
   database:
-    build:
-      context: ./database
-      dockerfile: Dockerfile
     container_name: database
+    build: ./database
+    env_file: ./database/.env
     ports:
       - "3306:3306"
-    env_file:
-      - ./database/.env
     volumes:
       - ./database/src:/docker-entrypoint-initdb.d
